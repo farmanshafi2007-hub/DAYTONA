@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elite Affiliate Store</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:'Poppins',sans-serif;
+background:#0b0f19;
+color:white;
+overflow-x:hidden;
+}
+
+header{
+position:sticky;
+top:0;
+z-index:1000;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 5%;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(12px);
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+color:#fff;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:14px;
+}
+
+.hero{
+min-height:90vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:60px 5%;
+background:linear-gradient(to right,#0b0f19,#111827);
+flex-wrap:wrap;
+}
+
+.hero-text{
+max-width:550px;
+}
+
+.hero-text h1{
+font-size:58px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero-text p{
+font-size:18px;
+color:#cbd5e1;
+margin-bottom:25px;
+}
+
+.hero-btn{
+display:inline-block;
+padding:14px 28px;
+background:#ff9900;
+color:black;
+font-weight:600;
+text-decoration:none;
+border-radius:10px;
+}
+
+.hero img{
+width:450px;
+max-width:100%;
+filter:drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+padding:40px 5%;
+}
+
+.stat{
+background:#111827;
+padding:25px;
+border-radius:18px;
+text-align:center;
+}
+
+.stat h2{
+font-size:30px;
+margin-bottom:8px;
+}
+
+.controls{
+display:flex;
+justify-content:space-between;
+gap:15px;
+padding:20px 5%;
+flex-wrap:wrap;
+}
+
+.search,select{
+padding:12px;
+border:none;
+border-radius:10px;
+background:#1e293b;
+color:white;
+min-width:200px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:22px;
+padding:20px 5% 80px;
+}
+
+.card{
+background:#111827;
+border-radius:20px;
+overflow:hidden;
+transition:0.3s;
+position:relative;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.35);
+}
+
+.card img{
+width:100%;
+height:240px;
+object-fit:cover;
+}
+
+.badge{
+position:absolute;
+top:15px;
+left:15px;
+background:#22c55e;
+padding:6px 12px;
+border-radius:20px;
+font-size:12px;
+font-weight:600;
+}
+
+.card-content{
+padding:18px;
+}
+
+.title{
+font-size:18px;
+font-weight:600;
+margin-bottom:8px;
+}
+
+.desc{
+font-size:13px;
+color:#94a3b8;
+margin-bottom:12px;
+line-height:1.6;
+}
+
+.price{
+font-size:22px;
+font-weight:700;
+margin-bottom:6px;
+}
+
+.old-price{
+text-decoration:line-through;
+font-size:14px;
+color:#94a3b8;
+margin-left:10px;
+}
+
+.rating{
+font-size:14px;
+margin-bottom:15px;
+color:#facc15;
+}
+
+.btn{
+display:block;
+text-align:center;
+padding:12px;
+background:#ff9900;
+color:black;
+text-decoration:none;
+font-weight:600;
+border-radius:10px;
+}
+
+.section-title{
+padding:0 5%;
+margin-top:40px;
+font-size:32px;
+font-weight:700;
+}
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+padding:30px 5%;
+}
+
+.review{
+background:#111827;
+padding:22px;
+border-radius:18px;
+}
+
+.review p{
+color:#cbd5e1;
+line-height:1.7;
+font-size:14px;
+margin-bottom:15px;
+}
+
+.review h4{
+font-size:15px;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#020617;
+color:#94a3b8;
+font-size:14px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">EliteStore</div>
+<nav>
+<a href="#">Home</a>
+<a href="#products">Products</a>
+<a href="#reviews">Reviews</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-text">
+<h1>Trending Products.<br>Best Amazon Deals.</h1>
+<p>Premium affiliate storefront designed to convert visitors into buyers. Promote top Amazon products with a modern shopping experience.</p>
+<a href="#products" class="hero-btn">Explore Products</a>
+</div>
+<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop" alt="hero">
+</section>
+
+<section class="stats">
+<div class="stat"><h2>10K+</h2><p>Monthly Visitors</p></div>
+<div class="stat"><h2>500+</h2><p>Products Listed</p></div>
+<div class="stat"><h2>4.9★</h2><p>User Ratings</p></div>
+<div class="stat"><h2>24/7</h2><p>Shopping Access</p></div>
+</section>
+
+<h2 class="section-title">Featured Products</h2>
+
+<div class="controls">
+<input type="text" id="search" class="search" placeholder="Search products...">
+<select id="categoryFilter">
+<option value="all">All Categories</option>
+<option value="tech">Tech</option>
+<option value="fitness">Fitness</option>
+<option value="fashion">Fashion</option>
+</select>
+<select id="sort">
+<option value="default">Sort Products</option>
+<option value="low">Price Low to High</option>
+<option value="high">Price High to Low</option>
+</select>
+</div>
+
+<section class="products" id="products"></section>
+
+<h2 class="section-title">Customer Reviews</h2>
+<section class="testimonials" id="reviews">
+<div class="review">
+<p>Excellent product recommendations and very clean shopping experience.</p>
+<h4>— Rahul</h4>
+</div>
+<div class="review">
+<p>I found amazing Amazon deals here. The website feels premium and fast.</p>
+<h4>— Ayesha</h4>
+</div>
+<div class="review">
+<p>Simple to use and products redirect directly to Amazon instantly.</p>
+<h4>— Zayan</h4>
+</div>
+</section>
+
+<footer>
+As an Amazon Associate, this website earns from qualifying purchases.
+</footer>
+
+<script>
+const products=[
+{
+name:'Premium Smart Watch',
+price:4999,
+oldPrice:7999,
+rating:'★★★★☆ 4.5',
+category:'tech',
+desc:'Modern smartwatch with fitness tracking and AMOLED display.',
+image:'https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=1200&auto=format&fit=crop',
+link:'https://amzn.to/YOUR-LINK-1'
+},
+{
+name:'Wireless Headphones',
+price:2999,
+oldPrice:4999,
+rating:'★★★★★ 4.8',
+category:'tech',
+desc:'High bass Bluetooth headphones with premium audio quality.',
+image:'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200&auto=format&fit=crop',
+link:'https://amzn.to/YOUR-LINK-2'
+},
+{
+name:'Running Shoes',
+price:2599,
+oldPrice:3999,
+rating:'★★★★☆ 4.4',
+category:'fitness',
+desc:'Comfortable lightweight running shoes for daily training.',
+image:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop',
+link:'https://amzn.to/YOUR-LINK-3'
+},
+{
+name:'Luxury Sunglasses',
+price:1899,
+oldPrice:2999,
+rating:'★★★★☆ 4.3',
+category:'fashion',
+desc:'Stylish UV protected sunglasses with premium finish.',
+image:'https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=1200&auto=format&fit=crop',
+link:'https://amzn.to/YOUR-LINK-4'
+}
+];
+
+const productContainer=document.getElementById('products');
+const search=document.getElementById('search');
+const category=document.getElementById('categoryFilter');
+const sort=document.getElementById('sort');
+
+function render(items){
+productContainer.innerHTML='';
+items.forEach(p=>{
+productContainer.innerHTML+=`
+<div class="card">
+<div class="badge">HOT</div>
+<img src="${p.image}">
+<div class="card-content">
+<div class="title">${p.name}</div>
+<div class="desc">${p.desc}</div>
+<div class="price">₹${p.price}<span class="old-price">₹${p.oldPrice}</span></div>
+<div class="rating">${p.rating}</div>
+<a class="btn" href="${p.link}" target="_blank">Buy On Amazon</a>
+</div>
+</div>`;
+});
+}
+
+function update(){
+let filtered=[...products];
+
+if(search.value){
+filtered=filtered.filter(p=>p.name.toLowerCase().includes(search.value.toLowerCase()));
+}
+
+if(category.value!=='all'){
+filtered=filtered.filter(p=>p.category===category.value);
+}
+
+if(sort.value==='low') filtered.sort((a,b)=>a.price-b.price);
+if(sort.value==='high') filtered.sort((a,b)=>b.price-a.price);
+
+render(filtered);
+}
+
+search.addEventListener('input',update);
+category.addEventListener('change',update);
+sort.addEventListener('change',update);
+
+render(products);
+</script>
+
+</body>
+</html>
